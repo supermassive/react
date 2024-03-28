@@ -32,7 +32,8 @@
         "build/*.js"
       ],
       "matches": [
-        "<all_urls>"
+        "<all_urls>",
+        "chrome://*/*"
       ],
       "extension_ids": []
     }
@@ -45,12 +46,14 @@
     "scripting"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "<all_urls>",
+    "chrome://*/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "<all_urls>",
+        "chrome://*/*"
       ],
       "js": [
         "build/prepareInjection.js"

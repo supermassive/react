@@ -5,7 +5,7 @@
 import setExtensionIconAndPopup from './setExtensionIconAndPopup';
 
 function isRestrictedBrowserPage(url) {
-  return !url || new URL(url).protocol === 'chrome:';
+  return !url;
 }
 
 function checkAndHandleRestrictedPageIfSo(tab) {

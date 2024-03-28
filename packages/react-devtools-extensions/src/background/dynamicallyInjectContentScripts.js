@@ -23,7 +23,7 @@ const contentScriptsToInject = __IS_FIREFOX__
       {
         id: '@react-devtools/proxy',
         js: ['build/proxy.js'],
-        matches: ['<all_urls>'],
+        matches: ['<all_urls>', 'chrome://*/*'],
         persistAcrossSessions: true,
         runAt: 'document_end',
         world: chrome.scripting.ExecutionWorld.ISOLATED,
@@ -31,7 +31,7 @@ const contentScriptsToInject = __IS_FIREFOX__
       {
         id: '@react-devtools/file-fetcher',
         js: ['build/fileFetcher.js'],
-        matches: ['<all_urls>'],
+        matches: ['<all_urls>', 'chrome://*/*'],
         persistAcrossSessions: true,
         runAt: 'document_end',
         world: chrome.scripting.ExecutionWorld.ISOLATED,
@@ -39,7 +39,7 @@ const contentScriptsToInject = __IS_FIREFOX__
       {
         id: '@react-devtools/hook',
         js: ['build/installHook.js'],
-        matches: ['<all_urls>'],
+        matches: ['<all_urls>', 'chrome://*/*'],
         persistAcrossSessions: true,
         runAt: 'document_start',
         world: chrome.scripting.ExecutionWorld.MAIN,
@@ -47,7 +47,7 @@ const contentScriptsToInject = __IS_FIREFOX__
       {
         id: '@react-devtools/renderer',
         js: ['build/renderer.js'],
-        matches: ['<all_urls>'],
+        matches: ['<all_urls>', 'chrome://*/*'],
         persistAcrossSessions: true,
         runAt: 'document_start',
         world: chrome.scripting.ExecutionWorld.MAIN,
